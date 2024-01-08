@@ -6,11 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-
-    <div id="root">
-
-    </div>
-
+    <div id="root"></div>
 
     <script
       src="https://unpkg.com/react@18/umd/react.development.js"
@@ -22,18 +18,55 @@
     ></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script>
-        let root = document.getElementById('root')
-        let rootEle = ReactDOM.createRoot(root)
+      let root = document.getElementById("root");
+      let rootEle = ReactDOM.createRoot(root);
 
+      let props = {
+        backgroundColor:'#FFE4C4',
+        border: "1px solid red",
+        display: "flex",
+        fontWeight: "bold",
+        fontSize: "30px",
+        padding:'40px',
+        gap:'30px'
+      };
 
-        let box = React.createElement('div',{id:'super'},[
-            React.createElement('div',{},'base 1'),
-            React.createElement('div',{},'base 2'),
-            React.createElement('div',{},'base 3'),
-            React.createElement('div',{},'base 4')
-        ])
+      let red = {
+        backgroundColor: 'red',
+        height:'80px',
+        width:'80px',
+        border:'1px solid black'
+      };
 
-        rootEle.render(box)
+      let yellow={
+        backgroundColor:'yellow',
+        height:'80px',
+        width:'80px',
+        border:'1px solid black'
+      }
+
+      let green={
+        backgroundColor:'green',
+        height:'80px',
+        width:'80px',
+        border:'1px solid black'
+      }
+
+      let violet={
+        backgroundColor:'violet',
+        height:'80px',
+        width:'80px',
+        border:'1px solid black'
+      }
+
+      let box = React.createElement("div", { id: "super", style: props },"Parent", [
+        React.createElement("div", { style: red }, "1"),
+        React.createElement("div", {style:yellow}, "2"),
+        React.createElement("div", {style:green}, "3"),
+        React.createElement("div", {style:violet}, "4"),
+      ]);
+
+      rootEle.render(box);
     </script>
   </body>
 </html>
