@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script>
+      let root = document.getElementById("root");
+      let rootEle = ReactDOM.createRoot(root);
+
+      
+      let box = React.createElement("div", { id: "container", class:"main" },[
+        React.createElement("h3","Learning React"),
+        React.createElement("p","Day 2"),
+        React.createElement("btn", "Click Me"),
+        
+      ]);
+
+      rootEle.render(box);
+    </script>
+  </body>
+</html>

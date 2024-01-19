@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        border: 1px solid black;
+        padding: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      const Card = (props) => {
+        const { name, hobbies, hasPowers, address, age } = props;
+        return (
+          <div className="card">
+            <p>Name : {name}</p>
+            <p>Hobbies : {hobbies}</p>
+            <p>Has SuperPowers : {hasPowers.toString()}</p>
+            <div style={{ color: "red" }}>
+              <p>Street : {address.street}</p>
+              <p>City : {address.city}</p>
+              <p>Country : {address.country}</p>
+            </div>
+            <p>age : {age}</p>
+          </div>
+        );
+      };
+
+      const App = () => {
+        return (
+          <div>
+            <Card
+              name="Batman"
+              hobbies={["Driving fancy cars", "Fighting crime"]}
+              hasPowers={false}
+              address={{ street: "3rd Main", city: "Gotham", country: "USA" }}
+              age={25}
+            />
+            
+          </div>
+        );
+      };
+
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+
+      reactRoot.render(<App />);
+    </script>
+  </body>
+</html>
