@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your code goes here
+    let reactRoot = ReactDOM.createRoot(document.getElementById('root'));
+
+    const TemperatureConverter = () => {
+      const [celsius, setCelsius] = React.useState('');
+      const [fahrenheit, setFahrenheit] = React.useState('');
+
+      const handleCelsiusChange = (e) => {
+        const value = e.target.value;
+        setCelsius(value);
+        setFahrenheit(value !== '' ? (value * 9/5 + 32).toFixed(2) : '');
+      };
+
+      const handleFahrenheitChange = (e) => {
+        const value = e.target.value;
+        setFahrenheit(value);
+        setCelsius(value !== '' ? ((value - 32) * 5/9).toFixed(2) : '');
+      };
+
+      return (
+        <div>
+          <label>
+            Celsius:
+            <input 
+              type="number" 
+              value={celsius} 
+              onChange={handleCelsiusChange} 
+            />
+          </label>
+          <br />
+          <label>
+            Fahrenheit:
+            <input 
+              type="number" 
+              value={fahrenheit} 
+              onChange={handleFahrenheitChange} 
+            />
+          </label>
+        </div>
+      );
+    };
+
+    reactRoot.render(<TemperatureConverter />);
+  </script>
+</html>
