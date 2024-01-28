@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superhero Cards</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #root {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .superhero-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        background-color: #fff;
+        width: 300px;
+      }
+
+      .superhero-image {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+
+      .is-bachelor {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        let reactRoot = ReactDOM.createRoot(document.getElementById('root'))
+      
+      const SuperheroCard = ({ superhero }) => {
+        const { name, age, powers, address, isBachelor, imageUrl } = superhero;
+
+        return (
+          <div className="superhero-card">
+            <img src={imageUrl} alt={name} className="superhero-image" />
+            <h2>{name}</h2>
+            <p>Age: {age}</p>
+            <p>Powers: {powers.join(", ")}</p>
+            <p>Address: {`${address.street}, ${address.city}, ${address.country}`}</p>
+            <p className={isBachelor ? "is-bachelor" : ""}>
+              {isBachelor ? "Bachelor" : "Not Bachelor"}
+            </p>
+          </div>
+        );
+      };
+
+      
+      function App() {
+        const superheroes = [
+      {
+        name: "Batman",
+        powers: ["Rich", "Fly", "Genius"],
+        address: {
+          street: "Gotham St",
+          city: "Gotham",
+          country: "USA",
+        },
+        age: 21,
+        isBachelor: true,
+        imageUrl:
+          "https://rukminim2.flixcart.com/image/850/1000/poster/7/d/g/batman-portrait-bt455566-medium-original-imaekp86fhb3fhxf.jpeg",
+      },
+      {
+        name: "Superman",
+        powers: ["Laser Fry", "Fly", "Runs Fast"],
+        address: {
+          street: "Central St",
+          city: "New York",
+          country: "USA",
+        },
+        age: 41,
+        isBachelor: false,
+        imageUrl:
+          "https://c8.alamy.com/comp/2R7EMM0/portrait-of-a-drawing-of-superman-superhero-warner-dc-and-comics-concept-2R7EMM0.jpg",
+      },
+    ];
+
+
+        return (
+          <div id="root">
+            {superheroes.map((superhero, index) => (
+              <SuperheroCard key={index} superhero={superhero} />
+            ))}
+          </div>
+        );
+      }
+
+      reactRoot.render(<App/>)
+    </script>
+  </body>
+</html>
