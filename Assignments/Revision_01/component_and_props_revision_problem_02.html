@@ -1,18 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Boilerplate Code</title>
-</head>
-<body>
+    <title>React Template</title>
+  </head>
+  <body>
     <div id="root"></div>
-		<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
-	  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
-	  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel">
-        // Your React code will go here
-    </script>
-</body>
-</html>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your task starts here
+    let reactRoot = ReactDOM.createRoot(document.getElementById("root"));
 
+    const User = (props) => {
+      return (
+        <>
+          <h2>User Information:</h2>
+          <p>Name: {props.name}</p>
+          <p>Age: {props.age}</p>
+          <p>Email: {props.email}</p>
+        </>
+      );
+    };
+
+    const ScoreCard = () => {
+      return (
+        <div>
+          <h2>ScoreCard:</h2>
+          <p>Score: 100</p>
+        </div>
+      );
+    };
+
+    const ContainerWithBlueBorder = ({ children }) => {
+      return (
+        <>
+          <div
+            style={{
+              border: "2px solid blue",
+              padding: "10px",
+              margin: "10px",
+            }}
+          >
+            {children}
+          </div>
+        </>
+      );
+    };
+
+    const App = () => {
+      return (
+        <>
+          <ContainerWithBlueBorder>
+            <User name="John Doe" age="25" email="john@example.com" />
+          </ContainerWithBlueBorder>
+
+          <ContainerWithBlueBorder>
+            <ScoreCard />
+          </ContainerWithBlueBorder>
+        </>
+      );
+    };
+
+    reactRoot.render(<App />);
+  </script>
+</html>
