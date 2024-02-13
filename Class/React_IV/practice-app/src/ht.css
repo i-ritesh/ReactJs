@@ -1,0 +1,363 @@
+
+.entry-content h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    padding: 10px 10px 10px 25px;
+    background-image: linear-gradient(to right, #2aa2f3 0%, #2aa2f2 51%, #2aa2f3 100%);
+    border-radius: 10px;
+    color: #fff !important;
+    box-shadow: rgba(23, 43, 99, 0.3) 0 7px 28px;
+}
+
+
+
+
+.widget-title {
+    font-weight: 500;
+    padding: 10px 10px 10px 25px;
+    background-image: linear-gradient(to right, #2aa2f3 0%, #2aa2f2 51%, #2aa2f3 100%);
+    border-radius: 10px;
+    color: #fff !important;
+    box-shadow: rgba(23, 43, 99, 0.3) 0 7px 28px;
+	text-align: center;
+}
+
+
+
+#rpwwt-recent-posts-widget-with-thumbnails-2 img {
+    width: 50px;
+    height: 50px;
+}
+.rpwwt-widget ul li img {
+    display: inline;
+    float: left;
+    margin: 0.2em 0.75em 0.75em 0;
+}
+.rpwwt-widget ul li img {
+    display: inline;
+    float: left;
+    margin: 0.3em 0.75em 0.75em 0;
+}
+.rpwwt-widget img {
+    border-radius: 4px;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+
+.wp-block-search__button {
+    background: linear-gradient(to right, #2aa2f3 0%, #2aa2f2 51%, #2aa2f3 100%);
+}
+.wp-block-search__button {
+    border-radius: 10px;
+    font-size: 14px !important;
+    padding: 8px 20px !important;
+    text-align: center;
+    color: #fff !important;
+    box-shadow: rgba(23, 43, 99, 0.3) 0 7px 28px !important;
+}
+
+
+a.gb-button {
+    font-size: 14px;
+    padding: 10px 25px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #fff;
+    box-shadow: rgba(23, 43, 99, 0.3) 0 7px 28px;
+    border-radius: 120px;
+}
+a.gb-button {
+    background-image: linear-gradient(to right, #2aa2f3 0%, #2aa2f2 51%, #2aa2f3 100%);
+}
+
+
+
+.gb-block-image img {
+    vertical-align: middle;
+    margin-top: 0px;
+    border-radius: 12px;
+    box-shadow: rgba(23, 43, 99, 0.2) 0 7px 28px !important;
+}
+
+
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    background-image: linear-gradient(to right, #2aa2f3 0%, #2aa2f3 51%, #2aa2f3 100%);
+    color: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+    -webkit-appearance: button;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+
+/* bloggingskill author box*/
+
+.bloggingskill-author-box {
+	padding: 3%;
+	padding-bottom: 10px;
+	margin-top: 30px;
+	font-size: 0.9em;
+	background-color: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+    box-shadow: rgb(23 43 99 / 30%) 0 2px 10px;
+    border-radius: 25px;
+}
+
+.bloggingskill-author-box .insights-avatar {
+	width: 250px;
+	height: auto;
+	border-radius: 100%;
+	margin-right: 30px;
+}
+.bloggingskill-author-box .insights-avatar img {
+		border-radius: 100%;
+	}
+.author-title {
+	margin-bottom: 0.1em;
+	font-weight: 500;
+	font-size:18px;
+	font-weight:bold;
+}
+.author-description {
+	line-height: 1.6em;
+	font-size:16px;	
+}
+.author-links a {
+	margin-top: -2em;
+	font-size: 14px;
+	line-height: 2em;
+	font-weight:bold;
+	color: #2aa2f3;
+	float: left;
+}
+@media (max-width: 768px) {
+	.bloggingskill-author-box {
+		padding: 20px;
+		padding-bottom: 25px;
+		margin-top: 60px;
+		margin-bottom: 60px;
+		flex-direction: column;
+		text-align: center;
+	}
+	.bloggingskill-author-box .insights-avatar {
+		margin-right: 0;
+		width: 100%;
+		margin-top: -60px; 
+	}
+	.bloggingskill-author-box .insights-avatar img {
+		max-width: 100px; 
+	}
+	.author-links a {
+		float: none;
+		align-self: center;
+	}
+	.author-description {
+		margin-bottom: -0.1em;
+	}
+}
+/*end of bloggingskill author box*/
+
+
+
+
+/* Entire Site Social Share Design by loan patrika*/
+
+.loanpatrika-float-social-wrapper {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+.loanpatrika-float-social-sharing {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 30px;
+    font-size: 12px;
+    padding: 14px 10px;
+}
+
+
+.loanpatrika-float-social-sharing:first-of-type {
+    border-top-right-radius: 10px;
+}
+
+.loanpatrika-float-social-sharing:last-of-type {
+    border-bottom-right-radius: 10px;
+}
+
+.loanpatrika-social-facebook {
+    fill: #fff;
+    background-color: rgba(59, 89, 152, 1);
+}
+
+.loanpatrika-social-facebook:hover {
+    background-color: rgba(59, 89, 152, .8);
+}
+
+.loanpatrika-social-twitter {
+    fill: #fff;
+    background-color: rgba(29, 161, 242, 1);
+}
+
+.loanpatrika-social-twitter:hover {
+    background-color: rgba(29, 161, 242, .8);
+}
+
+.loanpatrika-social-pinterest {
+    fill: #fff;
+    background-color: rgba(189, 8, 28, 1);
+}
+
+.loanpatrika-social-pinterest:hover {
+    background-color: rgba(189, 8, 28, .8);
+}
+
+.loanpatrika-social-linkedin {
+    fill: #fff;
+    background-color: rgba(0, 119, 181, 1);
+}
+
+.loanpatrika-social-linkedin:hover {
+    background-color: rgba(0, 119, 181, .8);
+}
+
+.loanpatrika-social-whatsapp {
+    fill: #fff;
+    background-color: rgba(37, 211, 102, 1);
+}
+
+.loanpatrika-social-whatsapp:hover {
+    background-color: rgba(37, 211, 102, .8);
+}
+
+.loanpatrika-social-telegram {
+    fill: #fff;
+    background-color: #1ba2f1;
+}
+
+.loanpatrika-social-telegram:hover {
+    background-color: #2686C6;
+}
+
+
+
+
+
+
+/* After Post Social Share Design by loan patrika*/
+
+.loanpatrika-social-wrapper {
+    margin: 30px 0;
+    font-size: 0;
+}
+
+.loanpatrika-social-wrapper span {
+    font-weight: bold;
+    padding-right: 10px;
+    font-size: 16px;
+}
+
+.loanpatrika-social-sharing {
+    font-size: 17px;
+    padding: 7px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .loanpatrika-social-sharing {
+        font-size: 17px;
+        padding: 6px 17px;
+        display: inline-block;
+    }
+	.loanpatrika-social-wrapper {
+    margin: 30px 0px;
+    font-size: 0;
+}
+
+
+}
+
+.loanpatrika-social-sharing svg {
+    position: relative;
+    top: 0.15em;
+    display: inline-block;
+}
+
+.loanpatrika-social-sharing:first-of-type {
+    border-radius: 100px 0 0 100px;
+}
+
+.loanpatrika-social-sharing:last-of-type {
+    border-radius: 0 100px 100px 0;
+}
+
+.loanpatrika-social-facebook {
+    fill: #fff;
+    background-color: rgba(59, 89, 152, 1);
+
+}
+
+.loanpatrika-social-facebook:hover {
+    background-color: rgba(59, 89, 152, .8);
+}
+
+.loanpatrika-social-twitter {
+    fill: #fff;
+    background-color: rgba(29, 161, 242, 1);
+}
+
+.loanpatrika-social-twitter:hover {
+    background-color: rgba(29, 161, 242, .8);
+}
+
+.loanpatrika-social-pinterest {
+    fill: #fff;
+    background-color: rgba(189, 8, 28, 1);
+}
+
+.loanpatrika-social-pinterest:hover {
+    background-color: rgba(189, 8, 28, .8);
+}
+
+.loanpatrika-social-linkedin {
+    fill: #fff;
+    background-color: rgba(0, 119, 181, 1);
+}
+
+.loanpatrika-social-linkedin:hover {
+    background-color: rgba(0, 119, 181, .8);
+}
+
+.loanpatrika-social-whatsapp {
+    fill: #fff;
+    background-color: rgba(37, 211, 102, 1);
+}
+
+.loanpatrika-social-whatsapp:hover {
+    background-color: rgba(37, 211, 102, .8);
+}
+
+.loanpatrika-social-reddit {
+    fill: #fff;
+    background-color: rgba(255, 87, 0, 1);
+}
+
+.loanpatrika-social-reddit:hover {
+    background-color: rgba(255, 87, 0, .8);
+}
